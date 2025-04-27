@@ -1,0 +1,454 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "2.0.0",
+    "title": "MediAssist API",
+    "description": "API for Managing queue calls",
+    "contact": {
+      "name": "API Support",
+      "email": "aditya283270@gmail.com"
+    }
+  },
+  "host": "localhost:5000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "securityDefinitions": {},
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/auth/login": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "example": "any"
+                },
+                "password": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/auth/signup": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "username": {
+                  "example": "any"
+                },
+                "email": {
+                  "example": "any"
+                },
+                "password": {
+                  "example": "any"
+                },
+                "role": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/DoctorDetails/": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "DoctorID": {
+                  "example": "any"
+                },
+                "Name": {
+                  "example": "any"
+                },
+                "Specialization": {
+                  "example": "any"
+                },
+                "ContactNumber": {
+                  "example": "any"
+                },
+                "Email": {
+                  "example": "any"
+                },
+                "Address": {
+                  "example": "any"
+                },
+                "Type": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/PatientDetails/": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "PatientID": {
+                  "example": "any"
+                },
+                "Name": {
+                  "example": "any"
+                },
+                "Age": {
+                  "example": "any"
+                },
+                "Gender": {
+                  "example": "any"
+                },
+                "ContactNumber": {
+                  "example": "any"
+                },
+                "Email": {
+                  "example": "any"
+                },
+                "Address": {
+                  "example": "any"
+                },
+                "Type": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/AppointmentDetails/": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "AppointmentID": {
+                  "example": "any"
+                },
+                "PatientID": {
+                  "example": "any"
+                },
+                "DoctorID": {
+                  "example": "any"
+                },
+                "AppointmentDate": {
+                  "example": "any"
+                },
+                "TimeSlot": {
+                  "example": "any"
+                },
+                "Status": {
+                  "example": "any"
+                },
+                "Type": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/MedicalRecordDetails/": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "RecordID": {
+                  "example": "any"
+                },
+                "PatientID": {
+                  "example": "any"
+                },
+                "Diagnosis": {
+                  "example": "any"
+                },
+                "Treatment": {
+                  "example": "any"
+                },
+                "Notes": {
+                  "example": "any"
+                },
+                "Date": {
+                  "example": "any"
+                },
+                "Type": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/PrescriptionDetails/": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "PrescriptionID": {
+                  "example": "any"
+                },
+                "AppointmentID": {
+                  "example": "any"
+                },
+                "DoctorID": {
+                  "example": "any"
+                },
+                "PatientID": {
+                  "example": "any"
+                },
+                "MedicineDetails": {
+                  "example": "any"
+                },
+                "Dosage": {
+                  "example": "any"
+                },
+                "Instructions": {
+                  "example": "any"
+                },
+                "DateIssued": {
+                  "example": "any"
+                },
+                "Type": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/BillingDetails/": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "BillID": {
+                  "example": "any"
+                },
+                "PatientID": {
+                  "example": "any"
+                },
+                "AppointmentID": {
+                  "example": "any"
+                },
+                "Amount": {
+                  "example": "any"
+                },
+                "PaymentStatus": {
+                  "example": "any"
+                },
+                "Type": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/Dashboard/": {
+      "post": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "helathResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "example": "200"
+        },
+        "message": {
+          "type": "string",
+          "example": "Health check successful"
+        }
+      }
+    },
+    "errorResponse.400": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "example": "400"
+        },
+        "message": {
+          "type": "string",
+          "example": "Bad Request: The request could not be understood or was missing required parameters"
+        }
+      }
+    },
+    "errorResponse.403": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "example": "403"
+        },
+        "message": {
+          "type": "string",
+          "example": "Forbidden: You do not have permission to access this resource"
+        }
+      }
+    },
+    "errorResponse.404": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "example": "404"
+        },
+        "message": {
+          "type": "string",
+          "example": "Not found"
+        }
+      }
+    },
+    "errorResponse.500": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "example": "500"
+        },
+        "message": {
+          "type": "string",
+          "example": "Internal Server Error: Something went wrong on our end"
+        }
+      }
+    }
+  }
+}
